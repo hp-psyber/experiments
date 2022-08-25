@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "osx-bluetooth": "^3.0.0",
+    "systeminformation": "^5.12.1"
+  }
+}
