@@ -9,7 +9,6 @@ async def main():
     devices = await BleakScanner.discover()
     for d in devices:
         d_splited_by_colon = str(d).split(':')
-        d_splited_by_colon[0]
         device = await BleakScanner.find_device_by_address(
             d_splited_by_colon[0]
         )
