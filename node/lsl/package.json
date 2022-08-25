@@ -1,0 +1,16 @@
+{
+    "name": "petal_metrics_lsl_test",
+    "version": "1.0.0",
+    "description": "Example scripts for testing EEG streams and Petal API calls",
+    "scripts": {
+      "start": "node lsl_receive.js --name PetalStream_ppg"
+    },
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+      "commander": "^6.1.0",
+      "node-lsl": "git+https://github.com/CalvinLeather/node-lsl.git",
+      "osc": "^2.4.1",
+    }
+  }
+  
