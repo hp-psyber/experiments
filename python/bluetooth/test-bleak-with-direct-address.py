@@ -26,10 +26,15 @@ async def main(wanted_name: str):
     splitted_string = str(device).split()
     address = splitted_string[0]
     address = address[:-1]
+
+    if(address != 'Non'):
+        async with BleakClient(address) as client:
+            battery_level = await client.read_gatt_char(uuid_battery_level_characteristic)
+            print(int.from_bytes(battery_level,byteorder='big'))
+    else:
+        print('BLE name not found')
+
     
-    async with BleakClient(address) as client:
-        battery_level = await client.read_gatt_char(uuid_battery_level_characteristic)
-        print(int.from_bytes(battery_level,byteorder='big'))
 
 
 if __name__ == "__main__":
